@@ -1,4 +1,3 @@
-
 import ScrollCue from "./ScrollCue";
 import { ArrowRight, ArrowDown, ArrowUp, ArrowLeft } from "lucide-react";
 
@@ -50,8 +49,26 @@ export default function HeroSection() {
     <section
       id="home"
       className="relative flex flex-col-reverse md:flex-row items-center justify-between py-20 md:py-32 min-h-[90vh] w-full overflow-hidden"
-      style={{ background: "linear-gradient(90deg, #FCA31114 0%, #FFFFFF 80%)" }}
     >
+      {/* Modern geometric + blurred background shapes */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        {/* Diagonal gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#fca3111c] via-[#e5e5e5] to-white" />
+        {/* Top left blurred circle */}
+        <div className="absolute left-[-14vw] top-[-6vw] w-[28vw] h-[28vw] rounded-full bg-[#FCA311] opacity-20 blur-3xl" />
+        {/* Bottom right blurred accent */}
+        <div className="absolute right-[-8vw] bottom-[-8vw] w-[22vw] h-[22vw] rounded-full bg-[#14213D] opacity-10 blur-2xl" />
+        {/* Accent geometric shape */}
+        <svg className="absolute top-[20%] right-0 translate-x-1/2 opacity-5 z-0" width="220" height="220" viewBox="0 0 220 220" fill="none">
+          <rect x="40" y="40" width="140" height="140" rx="40" fill="#FCA311"/>
+        </svg>
+        {/* Accent lines */}
+        <svg className="absolute bottom-0 left-[18vw] opacity-10 z-0 hidden md:block" width="160" height="44" viewBox="0 0 160 44" fill="none">
+          <rect y="14" width="160" height="16" rx="8" fill="#14213D" />
+        </svg>
+      </div>
+      {/* End background */}
+
       <div className="flex flex-col gap-6 md:gap-8 max-w-xl animate-fade-in z-10">
         <span className="uppercase tracking-[.27em] text-accent font-semibold text-xs md:text-sm">
           Hello! I&apos;m
