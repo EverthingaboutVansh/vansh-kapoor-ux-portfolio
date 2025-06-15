@@ -1,13 +1,9 @@
 
 import React from "react";
-
 export default function QuoteSection() {
   return (
     <section
-      className="w-full py-10 flex justify-center items-center"
-      style={{
-        background: "#FFFFFF", // Pure white background
-      }}
+      className="w-full py-10 flex justify-center items-center bg-light dark:bg-primary transition-colors"
     >
       <blockquote className="text-center max-w-2xl mx-auto px-6 text-lg md:text-2xl font-semibold font-montserrat drop-shadow-md animate-fade-in">
         <span

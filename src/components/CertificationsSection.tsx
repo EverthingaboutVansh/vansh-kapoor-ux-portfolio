@@ -37,9 +37,9 @@ const CERTIFICATIONS = [
 
 export default function CertificationsSection() {
   return (
-    <section id="certifications" className="py-20 bg-graybg">
+    <section id="certifications" className="py-20 bg-graybg dark:bg-primary transition-colors">
       <div className="container mx-auto">
-        <h2 className="font-poppins text-3xl font-bold text-primary mb-8 text-center flex justify-center items-center gap-2">
+        <h2 className="font-poppins text-3xl font-bold text-primary dark:text-accent mb-8 text-center flex justify-center items-center gap-2">
           <Award className="w-7 h-7 text-accent" />
           Certifications
         </h2>
@@ -47,9 +47,9 @@ export default function CertificationsSection() {
           {CERTIFICATIONS.map((cert) => (
             <div
               key={cert.title}
-              className="bg-white rounded-2xl shadow-card px-8 py-7 w-80 min-h-[140px] flex flex-col hover:shadow-hover transition"
+              className="bg-white dark:bg-background rounded-2xl shadow-card px-8 py-7 w-80 min-h-[140px] flex flex-col hover:shadow-hover transition"
             >
-              <h4 className="text-lg font-bold text-primary mb-1">
+              <h4 className="text-lg font-bold text-primary dark:text-accent mb-1">
                 {cert.url ? (
                   <a
                     href={cert.url}
@@ -63,8 +63,8 @@ export default function CertificationsSection() {
                   cert.title
                 )}
               </h4>
-              <span className="text-base text-black font-medium mb-2">{cert.issuer}</span>
-              {cert.extra && <span className="text-sm text-muted">{cert.extra}</span>}
+              <span className="text-base text-black dark:text-white font-medium mb-2">{cert.issuer}</span>
+              {cert.extra && <span className="text-sm text-muted dark:text-accent">{cert.extra}</span>}
             </div>
           ))}
         </div>
