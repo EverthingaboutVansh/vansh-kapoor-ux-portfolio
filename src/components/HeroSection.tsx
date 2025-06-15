@@ -71,10 +71,7 @@ export default function HeroSection() {
             Contact Me
             <ArrowDown className="w-4 h-4" />
           </a>
-          <a href="/resume.pdf" download className="rounded-lg border-2 border-accent px-6 py-3 font-bold text-accent hover:bg-accent hover:text-white transition-all duration-200 flex items-center gap-2">
-            Download Resume
-            <ArrowDown className="w-4 h-4" />
-          </a>
+          
         </div>
         <div className="flex gap-4 mt-4">
           {socialLinks.map(({

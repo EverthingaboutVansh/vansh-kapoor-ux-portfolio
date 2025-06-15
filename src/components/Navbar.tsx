@@ -1,37 +1,31 @@
-
 import { Github, Linkedin, Mail } from "lucide-react";
-
-const NAV_LINKS = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
-];
-
+const NAV_LINKS = [{
+  label: "Home",
+  href: "#home"
+}, {
+  label: "About",
+  href: "#about"
+}, {
+  label: "Experience",
+  href: "#experience"
+}, {
+  label: "Skills",
+  href: "#skills"
+}, {
+  label: "Projects",
+  href: "#projects"
+}, {
+  label: "Contact",
+  href: "#contact"
+}];
 export default function Navbar() {
-  return (
-    <nav className="sticky top-0 z-40 flex justify-between items-center w-full px-8 h-20 bg-white shadow backdrop-blur-md">
+  return <nav className="sticky top-0 z-40 flex justify-between items-center w-full px-8 h-20 bg-white shadow backdrop-blur-md">
       <a href="#home" className="font-poppins font-bold text-xl tracking-wider text-primary">Vansh Kapoor</a>
       <div className="flex-1 flex items-center justify-center gap-2">
-        {NAV_LINKS.map(link => (
-          <a
-            key={link.label}
-            href={link.href}
-            className="text-primary px-3 py-2 transition-colors rounded-lg font-medium hover:bg-accent hover:text-white"
-          >
+        {NAV_LINKS.map(link => <a key={link.label} href={link.href} className="text-primary px-3 py-2 transition-colors rounded-lg font-medium hover:bg-accent hover:text-white">
             {link.label}
-          </a>
-        ))}
-        <a
-          href="/lovable-uploads/VanshKapoor_Resume.pdf"
-          target="_blank"
-          className="ml-4 bg-accent text-black font-semibold rounded-lg px-4 py-2 transition hover:bg-primary hover:text-white"
-          rel="noopener noreferrer"
-        >
-          Download Resume
-        </a>
+          </a>)}
+        
       </div>
       <div className="flex items-center gap-3">
         <a href="https://github.com/EverthingaboutVansh" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -44,6 +38,5 @@ export default function Navbar() {
           <Mail className="text-primary hover:text-accent w-6 h-6 transition" />
         </a>
       </div>
-    </nav>
-  )
+    </nav>;
 }
