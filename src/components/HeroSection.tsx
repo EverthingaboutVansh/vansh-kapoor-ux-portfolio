@@ -1,5 +1,5 @@
 import ScrollCue from "./ScrollCue";
-import { ArrowRight, ArrowDown, ArrowUp, ArrowLeft } from "lucide-react";
+import { ArrowRight, ArrowDown, ArrowUp, ArrowLeft, Linkedin } from "lucide-react";
 const socialLinks = [{
   href: "https://github.com/EverthingaboutVansh",
   label: "GitHub",
@@ -10,14 +10,9 @@ const socialLinks = [{
         7A3.37 3.37 0 0 0 9 21.13V23" />
       </svg>
 }, {
-  href: "https://linkedin.com/in/vansh-kapoor-208491157",
+  href: "https://www.linkedin.com/in/vansh-kapoor-208491157/",
   label: "LinkedIn",
-  icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="w-6 h-6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="2" y="2" width="20" height="20" rx="5" />
-        <path d="M16 8a6 6 0 0 1 6 6v5h-4v-5a2 2 0 0 0-2-2 2 2 0 0 0-2 2v5h-4v-5a6 6 0 0 1 6-6z" />
-        <line x1="8" y1="11" x2="8" y2="17" />
-        <line x1="8" y1="8" x2="8" y2="8" />
-      </svg>
+  icon: <Linkedin className="w-6 h-6" strokeWidth={1.8} />
 }, {
   href: "mailto:kapoorvansh070@gmail.com",
   label: "Email",
