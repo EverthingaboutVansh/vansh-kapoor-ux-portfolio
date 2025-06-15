@@ -128,7 +128,7 @@ export default function HeroSection() {
           <div className="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-accent/80 via-[#fff7d1] to-transparent blur-2xl opacity-90 group-hover:opacity-100 transition-all duration-300" />
           <div className="rounded-full overflow-hidden border-4 border-accent shadow-xl w-48 h-48 md:w-56 md:h-56 flex items-center justify-center bg-graybg relative z-10">
             <img
-              src="https://ui-avatars.com/api/?name=Vansh+Kapoor&background=E5E5E5&color=14213D&size=300"
+              src="https://i.postimg.cc/1tKWKdyF/Portfolio-image.jpg"
               alt="Vansh Kapoor Profile"
               className="object-cover w-full h-full"
               draggable={false}
