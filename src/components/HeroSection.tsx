@@ -1,3 +1,4 @@
+
 import ScrollCue from "./ScrollCue";
 import { ArrowRight, ArrowDown, ArrowUp, ArrowLeft, Linkedin } from "lucide-react";
 const socialLinks = [{
@@ -21,8 +22,13 @@ const socialLinks = [{
         <polyline points="22,6 12,13 2,6" />
       </svg>
 }];
+
 export default function HeroSection() {
-  return <section id="home" className="relative flex flex-col-reverse md:flex-row items-center justify-between py-20 min-h-[90vh] w-full overflow-hidden md:py-[100px]">
+  return (
+    <section
+      id="home"
+      className="relative flex flex-col items-center justify-start py-14 min-h-[85vh] w-full overflow-hidden"
+    >
       {/* Modern geometric + blurred background shapes */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         {/* Diagonal gradient overlay */}
@@ -42,53 +48,69 @@ export default function HeroSection() {
       </div>
       {/* End background */}
 
-      <div className="flex flex-col gap-6 md:gap-8 max-w-xl animate-fade-in z-10">
-        <span className="uppercase tracking-[.27em] text-accent font-semibold text-xs md:text-sm">
-          Hello! I&apos;m
-        </span>
-        <h1 className="text-4xl md:text-6xl font-bold font-poppins text-primary mb-2 leading-tight drop-shadow-md">
-          Vansh Kapoor
-        </h1>
-        <h2 className="text-2xl md:text-3xl font-semibold text-black/85 font-poppins">
-          Junior <span className="text-accent">UX Designer</span> & Analyst
-        </h2>
-        <p className="text-base md:text-xl text-muted max-w-lg font-inter mt-2">
-          Transforming ideas into seamless digital experiences through
-          <span className="font-bold text-accent px-1">design</span>
-          and <span className="font-semibold px-1 text-primary">innovation</span>.
-        </p>
-        <div className="flex gap-4 mt-2 flex-wrap">
-          <a href="#projects" className="rounded-lg bg-primary px-6 py-3 font-semibold text-white text-base shadow-lg shadow-primary/10 hover:bg-accent hover:text-black transition-all duration-200 hover:shadow-md hover:scale-105 flex items-center gap-2">
-            View Work
-            <ArrowRight className="w-5 h-5" />
-          </a>
-          <a href="#contact" className="rounded-lg border-2 border-primary px-6 py-3 font-semibold text-primary text-base hover:bg-primary hover:text-white transition-all duration-200 flex items-center gap-2">
-            Contact Me
-            <ArrowDown className="w-4 h-4" />
-          </a>
-          
-        </div>
-        <div className="flex gap-4 mt-4">
-          {socialLinks.map(({
-          href,
-          label,
-          icon
-        }) => <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="rounded-full bg-graybg/70 border border-graybg hover:bg-accent hover:text-black hover:border-accent transition p-3 shadow hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label={label}>
-              {icon}
-            </a>)}
-        </div>
-      </div>
-      <div className="flex flex-col items-center mb-10 md:mb-0 mr-0 md:mr-8 z-20">
+      {/* Profile Image at the Top */}
+      <div className="flex flex-col items-center mb-5 mt-2 z-20">
         <div className="relative group">
           <div className="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-accent/80 via-[#fff7d1] to-transparent blur-2xl opacity-90 group-hover:opacity-100 transition-all duration-300" />
-          <div className="rounded-full overflow-hidden border-4 border-accent shadow-xl w-48 h-48 md:w-56 md:h-56 flex items-center justify-center bg-graybg relative z-10">
+          <div className="rounded-full overflow-hidden border-4 border-accent shadow-xl w-36 h-36 md:w-48 md:h-48 flex items-center justify-center bg-graybg relative z-10">
             <img src="https://i.postimg.cc/1tKWKdyF/Portfolio-image.jpg" alt="Vansh Kapoor Profile" className="object-cover w-full h-full" draggable={false} />
           </div>
-          <span className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-accent text-black rounded-full px-4 py-1 font-bold text-xs shadow-lg translate-y-1/2 whitespace-nowrap min-w-max z-20">
+          <span className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-accent text-black rounded-full px-3 py-1 font-bold text-[11px] md:text-xs shadow-lg translate-y-1/2 whitespace-nowrap min-w-max z-20">
             1.5+ Years Experience
           </span>
         </div>
       </div>
+
+      {/* Main Content Below Image */}
+      <div className="flex flex-col gap-3 md:gap-5 max-w-xl items-center animate-fade-in z-10">
+        <span className="uppercase tracking-[.22em] text-accent font-semibold text-xs md:text-sm">
+          Hello! I&apos;m
+        </span>
+        <h1 className="text-3xl md:text-5xl font-bold font-poppins text-primary mb-1 leading-tight drop-shadow-md text-center">
+          Vansh Kapoor
+        </h1>
+        <h2 className="text-xl md:text-2xl font-semibold text-black/85 font-poppins text-center">
+          Junior <span className="text-accent">UX Designer</span> & Analyst
+        </h2>
+        <p className="text-sm md:text-lg text-muted max-w-lg font-inter mt-1 text-center">
+          Transforming ideas into seamless digital experiences through
+          <span className="font-bold text-accent px-1">design</span>
+          and <span className="font-semibold px-1 text-primary">innovation</span>.
+        </p>
+        {/* Action Buttons */}
+        <div className="flex gap-4 mt-2 flex-wrap justify-center">
+          <a
+            href="#projects"
+            className="rounded-lg bg-primary px-6 py-3 font-semibold text-white text-base shadow-lg shadow-primary/10 hover:bg-accent hover:text-black transition-all duration-200 hover:shadow-md hover:scale-105 flex items-center gap-2"
+          >
+            View Work
+            <ArrowRight className="w-5 h-5" />
+          </a>
+          <a
+            href="#contact"
+            className="rounded-lg border-2 border-primary px-6 py-3 font-semibold text-primary text-base hover:bg-primary hover:text-white transition-all duration-200 flex items-center gap-2"
+          >
+            Contact Me
+            <ArrowDown className="w-4 h-4" />
+          </a>
+        </div>
+        {/* Social Links */}
+        <div className="flex gap-4 mt-3 justify-center">
+          {socialLinks.map(({ href, label, icon }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-graybg/70 border border-graybg hover:bg-accent hover:text-black hover:border-accent transition p-3 shadow hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              aria-label={label}
+            >
+              {icon}
+            </a>
+          ))}
+        </div>
+      </div>
       <ScrollCue />
-    </section>;
+    </section>
+  );
 }
