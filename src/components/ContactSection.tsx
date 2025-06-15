@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 import { Mail, Linkedin, Github } from "lucide-react";
+import emailjs from "@emailjs/browser";
 
 export default function ContactSection() {
   const [loading, setLoading] = useState(false);
@@ -11,14 +12,32 @@ export default function ContactSection() {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+
+    // EmailJS integration
+    try {
+      await emailjs.send(
+        "service_6jjfqhm",        // Service ID
+        "template_22z8c4j",       // Template ID
+        {
+          from_name: form.name,
+          from_email: form.email,
+          message: form.message,
+        },
+        "paaiJXcQhl3NjF9dL"       // Public key
+      );
       setForm({ name: "", email: "", message: "" });
       toast({ title: "Message Sent", description: "Thank you for reaching out!" });
-    }, 1200);
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again later or use another contact option.",
+      });
+    }
+    setLoading(false);
   }
 
   return (
