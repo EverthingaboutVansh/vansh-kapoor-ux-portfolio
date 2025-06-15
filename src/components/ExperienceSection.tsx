@@ -1,4 +1,3 @@
-
 import { Clock } from "lucide-react";
 const experience = [{
   date: "Dec 2023",
@@ -14,9 +13,10 @@ const experience = [{
   company: "HCL Tech"
 }];
 export default function ExperienceSection() {
-  return <section id="experience" className="py-20 bg-light dark:bg-primary transition-colors">
+  return (
+    <section id="experience" className="py-20 bg-light dark:bg-neutral-800 transition-colors">
       <div className="container mx-auto">
-        <h2 className="font-poppins text-3xl font-bold text-primary dark:text-accent mb-8 text-center">Work Experience</h2>
+        <h2 className="font-poppins text-3xl font-bold text-primary dark:text-yellow-200 mb-8 text-center">Work Experience</h2>
         <div className="relative max-w-2xl mx-auto">
           {/* vertical journey line */}
           <span className="absolute left-5 top-0 bottom-0 w-1 bg-gradient-to-b from-accent/80 via-accent/30 to-accent/0 rounded-full z-0 " aria-hidden="true" />
@@ -43,5 +43,6 @@ export default function ExperienceSection() {
           </ol>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }

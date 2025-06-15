@@ -37,9 +37,9 @@ const CERTIFICATIONS = [
 
 export default function CertificationsSection() {
   return (
-    <section id="certifications" className="py-20 bg-graybg dark:bg-primary transition-colors">
+    <section id="certifications" className="py-20 bg-graybg dark:bg-[#23234a] transition-colors">
       <div className="container mx-auto">
-        <h2 className="font-poppins text-3xl font-bold text-primary dark:text-accent mb-8 text-center flex justify-center items-center gap-2">
+        <h2 className="font-poppins text-3xl font-bold text-primary dark:text-yellow-200 mb-8 text-center flex justify-center items-center gap-2">
           <Award className="w-7 h-7 text-accent" />
           Certifications
         </h2>
@@ -47,15 +47,15 @@ export default function CertificationsSection() {
           {CERTIFICATIONS.map((cert) => (
             <div
               key={cert.title}
-              className="bg-white dark:bg-background rounded-2xl shadow-card px-8 py-7 w-80 min-h-[140px] flex flex-col hover:shadow-hover transition"
+              className="bg-white dark:bg-[#32325a] rounded-2xl shadow-card px-8 py-7 w-80 min-h-[140px] flex flex-col hover:shadow-hover transition"
             >
-              <h4 className="text-lg font-bold text-primary dark:text-accent mb-1">
+              <h4 className="text-lg font-bold text-primary dark:text-yellow-100 mb-1">
                 {cert.url ? (
                   <a
                     href={cert.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-accent hover:underline hover:text-primary/90 transition"
+                    className="text-accent hover:underline hover:text-primary/90 transition dark:text-yellow-200"
                   >
                     {cert.title}
                   </a>
@@ -64,7 +64,7 @@ export default function CertificationsSection() {
                 )}
               </h4>
               <span className="text-base text-black dark:text-white font-medium mb-2">{cert.issuer}</span>
-              {cert.extra && <span className="text-sm text-muted dark:text-accent">{cert.extra}</span>}
+              {cert.extra && <span className="text-sm text-muted dark:text-yellow-100">{cert.extra}</span>}
             </div>
           ))}
         </div>

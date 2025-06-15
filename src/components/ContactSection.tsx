@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 import { Mail, Linkedin, Github } from "lucide-react";
@@ -36,62 +35,62 @@ export default function ContactSection() {
     setLoading(false);
   }
   return (
-    <section id="contact" className="py-20 bg-light dark:bg-primary transition-colors">
+    <section id="contact" className="py-20 bg-light dark:bg-[#111116] transition-colors">
       <div className="container mx-auto flex flex-col md:flex-row gap-16">
         <div className="flex-1">
-          <h2 className="font-poppins text-3xl font-bold text-primary dark:text-accent mb-4">Contact</h2>
-          <p className="mb-6 text-base text-muted dark:text-white/80">
+          <h2 className="font-poppins text-3xl font-bold text-primary dark:text-yellow-200 mb-4">Contact</h2>
+          <p className="mb-6 text-base text-muted dark:text-gray-200">
             Feel free to get in touch for project collaboration, questions, or just to say hello.
           </p>
           <div className="flex flex-col gap-4 mt-8">
-            <a href="mailto:kapoorvansh070@gmail.com" className="flex items-center gap-3 text-primary dark:text-accent hover:text-accent text-lg font-semibold">
+            <a href="mailto:kapoorvansh070@gmail.com" className="flex items-center gap-3 text-primary dark:text-yellow-100 hover:text-accent text-lg font-semibold">
               <Mail className="w-6 h-6" /> kapoorvansh070@gmail.com
             </a>
-            <span className="flex items-center gap-3 text-primary dark:text-accent text-lg font-semibold">
+            <span className="flex items-center gap-3 text-primary dark:text-yellow-100 text-lg font-semibold">
               <span className="inline-block w-6 h-6 bg-accent rounded-full flex items-center justify-center text-black font-bold text-base">📞</span> +91 7065316119
             </span>
-            <a href="https://linkedin.com/in/vansh-kapoor-208491157" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-primary dark:text-accent hover:text-accent text-lg font-semibold">
+            <a href="https://linkedin.com/in/vansh-kapoor-208491157" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-primary dark:text-yellow-100 hover:text-accent text-lg font-semibold">
               <Linkedin className="w-6 h-6" /> LinkedIn
             </a>
-            <a href="https://github.com/EverthingaboutVansh" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-primary dark:text-accent hover:text-accent text-lg font-semibold">
+            <a href="https://github.com/EverthingaboutVansh" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-primary dark:text-yellow-100 hover:text-accent text-lg font-semibold">
               <Github className="w-6 h-6" /> GitHub
             </a>
           </div>
         </div>
-        <form className="flex-1 bg-white dark:bg-background rounded-2xl shadow-card p-8" onSubmit={handleSubmit}>
+        <form className="flex-1 bg-white dark:bg-[#191926] rounded-2xl shadow-card p-8" onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block mb-2 font-semibold text-primary dark:text-accent" htmlFor="name">Name</label>
+            <label className="block mb-2 font-semibold text-primary dark:text-yellow-100" htmlFor="name">Name</label>
             <input
               required
               id="name"
               name="name"
-              className="w-full px-4 py-2 border border-gray-300 dark:border-primary rounded-lg outline-accent bg-background dark:bg-primary/30 text-primary dark:text-accent"
+              className="w-full px-4 py-2 border border-gray-300 dark:border-yellow-300 rounded-lg outline-accent bg-background dark:bg-[#23232a] text-primary dark:text-yellow-100"
               value={form.name}
               onChange={handleChange}
               disabled={loading}
             />
           </div>
           <div className="mb-4">
-            <label className="block mb-2 font-semibold text-primary dark:text-accent" htmlFor="email">Email</label>
+            <label className="block mb-2 font-semibold text-primary dark:text-yellow-100" htmlFor="email">Email</label>
             <input
               required
               id="email"
               name="email"
               type="email"
-              className="w-full px-4 py-2 border border-gray-300 dark:border-primary rounded-lg outline-accent bg-background dark:bg-primary/30 text-primary dark:text-accent"
+              className="w-full px-4 py-2 border border-gray-300 dark:border-yellow-300 rounded-lg outline-accent bg-background dark:bg-[#23232a] text-primary dark:text-yellow-100"
               value={form.email}
               onChange={handleChange}
               disabled={loading}
             />
           </div>
           <div className="mb-6">
-            <label className="block mb-2 font-semibold text-primary dark:text-accent" htmlFor="message">Message</label>
+            <label className="block mb-2 font-semibold text-primary dark:text-yellow-100" htmlFor="message">Message</label>
             <textarea
               required
               id="message"
               name="message"
               rows={4}
-              className="w-full px-4 py-2 border border-gray-300 dark:border-primary rounded-lg outline-accent bg-background dark:bg-primary/30 text-primary dark:text-accent"
+              className="w-full px-4 py-2 border border-gray-300 dark:border-yellow-300 rounded-lg outline-accent bg-background dark:bg-[#23232a] text-primary dark:text-yellow-100"
               value={form.message}
               onChange={handleChange}
               disabled={loading}
@@ -100,7 +99,7 @@ export default function ContactSection() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-accent font-semibold text-black py-3 rounded-lg transition hover:bg-primary hover:text-white dark:hover:bg-accent/80 dark:hover:text-black"
+            className="w-full bg-accent font-semibold text-black py-3 rounded-lg transition hover:bg-primary hover:text-white dark:hover:bg-yellow-400 dark:hover:text-black"
           >
             {loading ? "Sending..." : "Send"}
           </button>

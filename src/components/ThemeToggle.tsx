@@ -1,8 +1,8 @@
 
 import { useEffect, useState } from "react";
-import { Moon, Sun } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
+import { Switch } from "./ui/switch";
 
-// Utility to get the preferred theme on initial load
 function getPreferredTheme() {
   if (typeof window === "undefined") return "light";
   if (localStorage.theme) return localStorage.theme;
@@ -23,20 +23,15 @@ export default function ThemeToggle() {
     localStorage.theme = theme;
   }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme(prev => (prev === "dark" ? "light" : "dark"));
-  };
+  const isDark = theme === "dark";
+
+  const toggleTheme = () => setTheme(isDark ? "light" : "dark");
 
   return (
-    <button
-      onClick={toggleTheme}
-      aria-label="Toggle dark mode"
-      className="rounded-full p-2 transition hover:bg-graybg dark:hover:bg-zinc-800 border border-transparent hover:border-accent text-primary dark:text-accent bg-white dark:bg-primary/80 focus:outline-none focus:ring-2 focus:ring-accent"
-      title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
-      style={{ lineHeight: 0 }}
-      type="button"
-    >
-      {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-    </button>
+    <div className="flex items-center gap-2">
+      <Sun className={`w-5 h-5 ${isDark ? "text-muted" : "text-accent"}`} />
+      <Switch checked={isDark} onCheckedChange={toggleTheme} aria-label="Toggle dark mode" />
+      <Moon className={`w-5 h-5 ${isDark ? "text-accent" : "text-muted"}`} />
+    </div>
   );
 }
