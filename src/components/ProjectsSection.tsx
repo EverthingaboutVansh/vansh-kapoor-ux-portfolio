@@ -1,11 +1,10 @@
-
 import { Github } from "lucide-react";
 
 const PROJECTS = [
   {
     title: "Urban Property Management System",
     description: "Auth system with OTP & 2FA, tenant/landlord dashboard, Java AWT + MySQL backend.",
-    link: "https://github.com/EverthingaboutVansh/urban-property-management",
+    link: "https://github.com/EverthingaboutVansh/Urban-Property-Management-System",
     stack: ["Java", "MySQL", "AWT"],
   },
   {
