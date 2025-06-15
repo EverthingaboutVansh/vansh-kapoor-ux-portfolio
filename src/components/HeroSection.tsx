@@ -94,7 +94,8 @@ export default function HeroSection() {
           </a>
         </div>
         {/* Social Links */}
-        <div className="flex gap-4 mt-3 justify-center">
+        <div className="flex gap-4 mt-3 mb-12 justify-center">
+          {/* Added mb-12 for extra space below social links */}
           {socialLinks.map(({ href, label, icon }) => (
             <a
               key={label}
@@ -109,6 +110,8 @@ export default function HeroSection() {
           ))}
         </div>
       </div>
+      {/* Move ScrollCue further down */}
+      <div className="mb-3 md:mb-6" />
       <ScrollCue />
     </section>
   );
