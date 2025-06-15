@@ -8,7 +8,7 @@ const experience = [{
   title: "Analyst (Design Trainee)",
   company: "HCL Tech"
 }, {
-  date: "April 2025",
+  date: "April 2025 - Present",
   title: "Analyst (Junior UX Designer)",
   company: "HCL Tech"
 }];
