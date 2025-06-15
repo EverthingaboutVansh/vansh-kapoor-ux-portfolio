@@ -10,9 +10,14 @@ export default function QuoteSection() {
           "linear-gradient(90deg, #E60E77 0%, #E60E77 12%, #9946AD 31%, #9946AD 55%, #462DAC 76%, #462DAC 86%, #3C1BC2 100%)",
       }}
     >
-      <blockquote className="text-center max-w-2xl mx-auto px-6 text-white text-lg md:text-2xl font-semibold font-montserrat drop-shadow-md animate-fade-in">
-        “If you can dream it, you can do it.<span className="font-normal"> - Enzo Ferrari.</span>
-        ”
+      <blockquote className="text-center max-w-2xl mx-auto px-6 text-lg md:text-2xl font-semibold font-montserrat drop-shadow-md animate-fade-in">
+        <span
+          className="bg-gradient-to-r from-[#E60E77] via-[#9946AD] via-60% to-[#3C1BC2] bg-clip-text text-transparent"
+        >
+          “If you can dream it, you can do it.
+          <span className="font-normal"> - Enzo Ferrari.</span>
+          ”
+        </span>
       </blockquote>
     </section>
   );
