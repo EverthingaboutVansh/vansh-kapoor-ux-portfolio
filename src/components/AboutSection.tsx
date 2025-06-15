@@ -1,14 +1,8 @@
-
 export default function AboutSection() {
-  return (
-    <section id="about" className="py-20 bg-graybg">
+  return <section id="about" className="py-20 bg-graybg">
       <div className="container mx-auto flex flex-col md:flex-row gap-14 items-center">
         <div className="w-44 h-44 rounded-full border-4 border-primary overflow-hidden bg-white flex-shrink-0 shadow-md">
-          <img
-            src="https://ui-avatars.com/api/?name=Vansh+Kapoor&background=E5E5E5&color=14213D&size=300"
-            alt="Profile"
-            className="object-cover w-full h-full"
-          />
+          <img alt="Profile" className="object-cover w-full h-full" src="https://i.postimg.cc/1tKWKdyF/Portfolio-image.jpg" />
         </div>
         <div className="flex-1">
           <h2 className="font-poppins text-3xl font-bold text-primary mb-2">About Me</h2>
@@ -30,6 +24,5 @@ export default function AboutSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
