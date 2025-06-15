@@ -1,4 +1,3 @@
-
 import ScrollCue from "./ScrollCue";
 import { ArrowRight, ArrowDown, ArrowUp, ArrowLeft, Linkedin } from "lucide-react";
 const socialLinks = [{
@@ -62,7 +61,7 @@ export default function HeroSection() {
       </div>
 
       {/* Main Content Below Image */}
-      <div className="flex flex-col gap-3 md:gap-5 max-w-xl items-center animate-fade-in z-10">
+      <div className="flex flex-col gap-3 md:gap-5 max-w-xl items-center animate-fade-in z-10 mb-20">
         <span className="uppercase tracking-[.22em] text-accent font-semibold text-xs md:text-sm">
           Hello! I&apos;m
         </span>
