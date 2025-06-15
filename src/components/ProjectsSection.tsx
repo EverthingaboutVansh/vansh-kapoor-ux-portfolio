@@ -16,7 +16,7 @@ const PROJECTS = [
   {
     title: "Croma Booking & Billing System",
     description: "Booking/purchase system, Java + MySQL, inventory catalog.",
-    link: "https://github.com/EverthingaboutVansh/croma-billing-system",
+    link: "https://github.com/EverthingaboutVansh/Croma-Booking-Billing-System",
     stack: ["Java", "MySQL"],
   },
 ];
