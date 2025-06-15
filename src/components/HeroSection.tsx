@@ -1,55 +1,33 @@
 import ScrollCue from "./ScrollCue";
 import { ArrowRight, ArrowDown, ArrowUp, ArrowLeft } from "lucide-react";
-
-const socialLinks = [
-  {
-    href: "https://github.com/EverthingaboutVansh",
-    label: "GitHub",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-        className="w-6 h-6"
-        stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+const socialLinks = [{
+  href: "https://github.com/EverthingaboutVansh",
+  label: "GitHub",
+  icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="w-6 h-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44
         5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65
         5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77 5.44 5.44 0 0 0 3.5 8.73c0 5.42 3.3 6.61 6.44
-        7A3.37 3.37 0 0 0 9 21.13V23"/>
+        7A3.37 3.37 0 0 0 9 21.13V23" />
       </svg>
-    ),
-  },
-  {
-    href: "https://linkedin.com/in/vansh-kapoor-208491157",
-    label: "LinkedIn",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-        className="w-6 h-6"
-        stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+}, {
+  href: "https://linkedin.com/in/vansh-kapoor-208491157",
+  label: "LinkedIn",
+  icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="w-6 h-6" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="2" width="20" height="20" rx="5" />
-        <path d="M16 8a6 6 0 0 1 6 6v5h-4v-5a2 2 0 0 0-2-2 2 2 0 0 0-2 2v5h-4v-5a6 6 0 0 1 6-6z"/>
-        <line x1="8" y1="11" x2="8" y2="17"/>
-        <line x1="8" y1="8" x2="8" y2="8"/>
+        <path d="M16 8a6 6 0 0 1 6 6v5h-4v-5a2 2 0 0 0-2-2 2 2 0 0 0-2 2v5h-4v-5a6 6 0 0 1 6-6z" />
+        <line x1="8" y1="11" x2="8" y2="17" />
+        <line x1="8" y1="8" x2="8" y2="8" />
       </svg>
-    ),
-  },
-  {
-    href: "mailto:kapoorvansh070@gmail.com",
-    label: "Email",
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-        className="w-6 h-6"
-        stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+}, {
+  href: "mailto:kapoorvansh070@gmail.com",
+  label: "Email",
+  icon: <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="w-6 h-6" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="4" width="20" height="16" rx="4" />
         <polyline points="22,6 12,13 2,6" />
       </svg>
-    ),
-  },
-];
-
+}];
 export default function HeroSection() {
-  return (
-    <section
-      id="home"
-      className="relative flex flex-col-reverse md:flex-row items-center justify-between py-20 md:py-32 min-h-[90vh] w-full overflow-hidden"
-    >
+  return <section id="home" className="relative flex flex-col-reverse md:flex-row items-center justify-between py-20 min-h-[90vh] w-full overflow-hidden md:py-[100px]">
       {/* Modern geometric + blurred background shapes */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         {/* Diagonal gradient overlay */}
@@ -60,7 +38,7 @@ export default function HeroSection() {
         <div className="absolute right-[-8vw] bottom-[-8vw] w-[22vw] h-[22vw] rounded-full bg-[#14213D] opacity-10 blur-2xl" />
         {/* Accent geometric shape */}
         <svg className="absolute top-[20%] right-0 translate-x-1/2 opacity-5 z-0" width="220" height="220" viewBox="0 0 220 220" fill="none">
-          <rect x="40" y="40" width="140" height="140" rx="40" fill="#FCA311"/>
+          <rect x="40" y="40" width="140" height="140" rx="40" fill="#FCA311" />
         </svg>
         {/* Accent lines */}
         <svg className="absolute bottom-0 left-[18vw] opacity-10 z-0 hidden md:block" width="160" height="44" viewBox="0 0 160 44" fill="none">
@@ -85,54 +63,34 @@ export default function HeroSection() {
           and <span className="font-semibold px-1 text-primary">innovation</span>.
         </p>
         <div className="flex gap-4 mt-2 flex-wrap">
-          <a
-            href="#projects"
-            className="rounded-lg bg-primary px-6 py-3 font-semibold text-white text-base shadow-lg shadow-primary/10 hover:bg-accent hover:text-black transition-all duration-200 hover:shadow-md hover:scale-105 flex items-center gap-2"
-          >
+          <a href="#projects" className="rounded-lg bg-primary px-6 py-3 font-semibold text-white text-base shadow-lg shadow-primary/10 hover:bg-accent hover:text-black transition-all duration-200 hover:shadow-md hover:scale-105 flex items-center gap-2">
             View Work
             <ArrowRight className="w-5 h-5" />
           </a>
-          <a
-            href="#contact"
-            className="rounded-lg border-2 border-primary px-6 py-3 font-semibold text-primary text-base hover:bg-primary hover:text-white transition-all duration-200 flex items-center gap-2"
-          >
+          <a href="#contact" className="rounded-lg border-2 border-primary px-6 py-3 font-semibold text-primary text-base hover:bg-primary hover:text-white transition-all duration-200 flex items-center gap-2">
             Contact Me
             <ArrowDown className="w-4 h-4" />
           </a>
-          <a
-            href="/resume.pdf"
-            download
-            className="rounded-lg border-2 border-accent px-6 py-3 font-bold text-accent hover:bg-accent hover:text-white transition-all duration-200 flex items-center gap-2"
-          >
+          <a href="/resume.pdf" download className="rounded-lg border-2 border-accent px-6 py-3 font-bold text-accent hover:bg-accent hover:text-white transition-all duration-200 flex items-center gap-2">
             Download Resume
             <ArrowDown className="w-4 h-4" />
           </a>
         </div>
         <div className="flex gap-4 mt-4">
-          {socialLinks.map(({ href, label, icon }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full bg-graybg/70 border border-graybg hover:bg-accent hover:text-black hover:border-accent transition p-3 shadow hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-              aria-label={label}
-            >
+          {socialLinks.map(({
+          href,
+          label,
+          icon
+        }) => <a key={label} href={href} target="_blank" rel="noopener noreferrer" className="rounded-full bg-graybg/70 border border-graybg hover:bg-accent hover:text-black hover:border-accent transition p-3 shadow hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-label={label}>
               {icon}
-            </a>
-          ))}
+            </a>)}
         </div>
       </div>
       <div className="flex flex-col items-center mb-10 md:mb-0 mr-0 md:mr-8 z-20">
         <div className="relative group">
           <div className="absolute -inset-1.5 rounded-full bg-gradient-to-tr from-accent/80 via-[#fff7d1] to-transparent blur-2xl opacity-90 group-hover:opacity-100 transition-all duration-300" />
           <div className="rounded-full overflow-hidden border-4 border-accent shadow-xl w-48 h-48 md:w-56 md:h-56 flex items-center justify-center bg-graybg relative z-10">
-            <img
-              src="https://i.postimg.cc/1tKWKdyF/Portfolio-image.jpg"
-              alt="Vansh Kapoor Profile"
-              className="object-cover w-full h-full"
-              draggable={false}
-            />
+            <img src="https://i.postimg.cc/1tKWKdyF/Portfolio-image.jpg" alt="Vansh Kapoor Profile" className="object-cover w-full h-full" draggable={false} />
           </div>
           <span className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-accent text-black rounded-full px-4 py-1 font-bold text-xs shadow-lg translate-y-1/2 whitespace-nowrap min-w-max z-20">
             1.5+ Years Experience
@@ -140,6 +98,5 @@ export default function HeroSection() {
         </div>
       </div>
       <ScrollCue />
-    </section>
-  );
+    </section>;
 }
