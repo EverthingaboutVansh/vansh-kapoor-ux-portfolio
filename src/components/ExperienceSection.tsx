@@ -14,9 +14,9 @@ const experience = [{
 }];
 export default function ExperienceSection() {
   return (
-    <section id="experience" className="py-20 bg-light dark:bg-neutral-800 transition-colors">
+    <section id="experience" className="py-20 bg-light transition-colors">
       <div className="container mx-auto">
-        <h2 className="font-poppins text-3xl font-bold text-primary dark:text-yellow-200 mb-8 text-center">Work Experience</h2>
+        <h2 className="font-poppins text-3xl font-bold text-primary mb-8 text-center">Work Experience</h2>
         <div className="relative max-w-2xl mx-auto">
           {/* vertical journey line */}
           <span className="absolute left-5 top-0 bottom-0 w-1 bg-gradient-to-b from-accent/80 via-accent/30 to-accent/0 rounded-full z-0 " aria-hidden="true" />
@@ -24,20 +24,20 @@ export default function ExperienceSection() {
             {experience.map((exp, idx) => <li key={exp.title} className="mb-14 relative">
                 {/* Timeline dot */}
                 <span className="absolute left-2.5 top-1.5 z-10 flex items-center justify-center">
-                  <span className={`w-5 h-5 rounded-full border-4 border-white dark:border-primary shadow-lg
-                      ${idx === 0 ? "bg-accent/90 animate-scale-in" : idx === experience.length - 1 ? "bg-primary/80 animate-fade-in dark:bg-accent/80" : "bg-accent/70 animate-fade-in"}
+                  <span className={`w-5 h-5 rounded-full border-4 border-white shadow-lg
+                      ${idx === 0 ? "bg-accent/90 animate-scale-in" : idx === experience.length - 1 ? "bg-primary/80 animate-fade-in" : "bg-accent/70 animate-fade-in"}
                     `} />
                 </span>
                 {/* The content */}
                 <div className="pl-7">
-                  <span className="flex items-center gap-1.5 mb-1 text-muted font-semibold text-base dark:text-white/80">
+                  <span className="flex items-center gap-1.5 mb-1 text-muted font-semibold text-base">
                     <Clock size={14} className="inline-block text-accent" />
                     {exp.date}
                   </span>
-                  <h3 className="text-lg text-black leading-tight mb-0.5 font-semibold sm:text-2xl dark:text-white">
+                  <h3 className="text-lg text-black leading-tight mb-0.5 font-semibold sm:text-2xl">
                     {exp.title}
                   </h3>
-                  <p className="text-base text-primary dark:text-accent">{exp.company}</p>
+                  <p className="text-base text-primary">{exp.company}</p>
                 </div>
               </li>)}
           </ol>

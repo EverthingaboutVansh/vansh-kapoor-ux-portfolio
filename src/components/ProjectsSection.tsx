@@ -23,9 +23,9 @@ const PROJECTS = [
 
 export default function ProjectsSection() {
   return (
-    <section id="projects" className="py-20 bg-graybg dark:bg-[#051525] transition-colors">
+    <section id="projects" className="py-20 bg-graybg transition-colors">
       <div className="container mx-auto">
-        <h2 className="font-poppins text-3xl font-bold text-primary dark:text-yellow-200 mb-8 text-center">Projects & Portfolio</h2>
+        <h2 className="font-poppins text-3xl font-bold text-primary mb-8 text-center">Projects & Portfolio</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {PROJECTS.map(project => (
             <a
@@ -33,16 +33,16 @@ export default function ProjectsSection() {
               target="_blank"
               rel="noopener noreferrer"
               key={project.title}
-              className="bg-white dark:bg-[#16374E] rounded-2xl shadow-card hover:shadow-hover transition flex flex-col px-7 py-8 group"
+              className="bg-white rounded-2xl shadow-card hover:shadow-hover transition flex flex-col px-7 py-8 group"
             >
               <div className="flex flex-row justify-between items-center mb-3">
-                <span className="font-semibold text-accent dark:text-yellow-200">{project.stack.join(", ")}</span>
-                <Github className="w-6 h-6 text-primary dark:text-yellow-100 opacity-70 group-hover:text-accent group-hover:opacity-100 transition" />
+                <span className="font-semibold text-accent">{project.stack.join(", ")}</span>
+                <Github className="w-6 h-6 text-primary opacity-70 group-hover:text-accent group-hover:opacity-100 transition" />
               </div>
-              <h4 className="font-poppins text-xl font-bold text-primary dark:text-yellow-100 mb-3 group-hover:underline">
+              <h4 className="font-poppins text-xl font-bold text-primary mb-3 group-hover:underline">
                 {project.title}
               </h4>
-              <p className="flex-1 text-base text-muted dark:text-gray-200">{project.description}</p>
+              <p className="flex-1 text-base text-muted">{project.description}</p>
             </a>
           ))}
         </div>

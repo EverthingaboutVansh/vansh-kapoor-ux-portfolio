@@ -27,7 +27,7 @@ export default function HeroSection() {
     <section
       id="home"
       className="relative flex flex-col items-center justify-start py-14 min-h-[85vh] w-full overflow-hidden
-        bg-background dark:bg-neutral-900 transition-colors"
+        bg-background transition-colors"
     >
       {/* Modern geometric + blurred background shapes */}
       <div className="pointer-events-none absolute inset-0 -z-10">
