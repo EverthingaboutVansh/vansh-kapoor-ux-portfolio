@@ -6,8 +6,7 @@ export default function QuoteSection() {
     <section
       className="w-full py-10 flex justify-center items-center"
       style={{
-        background:
-          "linear-gradient(90deg, #E60E77 0%, #E60E77 12%, #9946AD 31%, #9946AD 55%, #462DAC 76%, #462DAC 86%, #3C1BC2 100%)",
+        background: "#FFFFFF", // Pure white background
       }}
     >
       <blockquote className="text-center max-w-2xl mx-auto px-6 text-lg md:text-2xl font-semibold font-montserrat drop-shadow-md animate-fade-in">
