@@ -1,5 +1,5 @@
+
 import { Github, Linkedin, Mail } from "lucide-react";
-import ThemeToggle from "./ThemeToggle";
 
 const NAV_LINKS = [{
   label: "Home",
@@ -31,7 +31,7 @@ export default function Navbar() {
           </a>)}
       </div>
       <div className="flex items-center gap-3">
-        <ThemeToggle />
+        {/* Removed ThemeToggle */}
         <a href="https://github.com/EverthingaboutVansh" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <Github className="text-primary hover:text-accent w-6 h-6 transition" />
         </a>
